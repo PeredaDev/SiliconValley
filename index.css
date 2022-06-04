@@ -122,17 +122,18 @@ footer table{
 
 #blogs-title h1{
     grid-column: span 2;
-}
-
-#blogs-title div{
-    vertical-align: top;
-    display: inline-block;
-    text-align: left;
+    text-align: center;
 }
 
 #blogs-title img{
     margin-top: auto;
     margin-bottom: auto;
+}
+
+#blogs-title div{
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
 }
 
 #blogs-title div h2{
@@ -145,7 +146,16 @@ footer table{
     font-style: italic;
 }
 
-#blogs-title div button{
+#blogs-title div p{
+    text-align: justify;
+}
+
+#blogs-title div div {
+    text-align: center;
+    width: 100%;
+}
+
+#blogs-title div div button{
     background-color: rgba(12, 35, 94, 0.8);
     color: white;
     border-radius: 5px;
@@ -156,6 +166,110 @@ footer table{
 }
 
 /*Products Body*/
+
+#hero {
+    text-align: center;
+    color: white;
+    background-color: rgba(12, 35, 94, 0.8);
+    margin: 15px 0;
+}
+
+#hero button{
+    background-color: rgba(12, 35, 94, 0.8);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    border-width: 0px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#categories {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#categories button{
+    background-color: rgba(12, 35, 94, 0.8);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+#catalog {
+    margin: 15px 6em;
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 1em;
+    justify-items: center;
+}
+
+.catalog__card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 15px;
+    overflow: hidden;
+    height: 380px;
+}
+
+.catalog__card img{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.catalog__card div p{
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.catalog__card button{
+    background-color: rgba(12, 35, 94, 0.8);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1090px) {
+    #blogs-title {
+        grid-template: 1fr / 1fr;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    
+    #blogs-title h1{
+        grid-column: span 1;
+        font-size: 2.3em;
+    }
+
+    #blogs-title div h2{
+        color:  #0c235ecc;
+        font-size: 2em;
+    }
+    
+    #blogs-title div time{
+        font-size: 1.5em;
+        font-style: italic;
+    }
+
+    #blogs-title div p{
+        font-size: 1.5em;
+    }
+
+    #catalog {
+        grid-template: auto / 1fr 1fr 1fr;
+    }
+}
 
 @media (max-width: 880px) {
     .banner {
@@ -186,6 +300,21 @@ footer table{
     header nav ul{
         margin-right: 0rem;
     } 
+
+    #catalog {
+        grid-template: auto / 1fr 1fr;
+    }
+}
+
+@media (max-width: 780px) {
+    #catalog {
+        grid-template: auto / 1fr;
+        margin: 15px 1em;
+    }
+
+    .catalog__card{
+        width: 320px;
+    }
 }
 
 @media (max-width: 522px) {
@@ -217,30 +346,9 @@ footer table{
     .banner {
         font-size: 1.5rem;
     }   
-}
 
-@media (max-width: 1024px) {
-    #blogs-title {
-        grid-template: 1fr / 1fr;
-        margin-left: 35px;
-        margin-right: 35px;
-    }
-    #blogs-title h1{
-        grid-column: span 1;
-        font-size: 2.3em;
-    }
-
-    #blogs-title div h2{
-        color:  #0c235ecc;
-        font-size: 2em;
-    }
-    
-    #blogs-title div time{
-        font-size: 1.5em;
-        font-style: italic;
-    }
     #blogs-title div p{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 }
 
@@ -300,7 +408,7 @@ footer table{
     margin-top: 15px;
 
     margin-bottom: 15px;
-}git
+}
 
 #star-items .star-items__button{
     background-color: rgba(12, 35, 94, 0.8);
@@ -485,77 +593,4 @@ body .main{
     font-size: 15px;
     height: 30px;
     width: 120px;
-}
-
-#hero {
-    text-align: center;
-    color: white;
-    background-color: rgba(12, 35, 94, 0.8);
-    overflow:auto;
-}
-
-#hero button{
-    background-color: blue;
-    color: white;
-    font-size: 15px;
-    height: 30px;
-    width: 120px;
-    margin-bottom: 25px;
-    border-width: 0px;
-    border-radius: 5px;
-}
-
-#catalog{
-    overflow:auto;
-}
-
-.catalog__categories{
-    margin: 25px 0px;
-}
-
-
-.catalog__categories button{
-    background-color: rgba(12, 35, 94, 0.8);
-    color: white;
-    font-size: 15px;
-    height: 45px;
-    width: 200px;
-    border-width: 0px;
-    border-radius: 5px;
-}
-
-.catalog-cards__card{
-    display: inline-block;
-    margin: 10px 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    padding: 20px;
-    width: 30%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.catalog-cards__card img{
-    height: 300px;
-    width: 100%;
-}
-
-.catalog-cards{
-    vertical-align: top;
-}
-
-.container p{
-    margin-bottom: 15px;
-    font-size: 19px;
-}
-
-.catalog-cards__card button{
-    background-color: rgba(12, 35, 94, 0.8);
-    color: white;
-    font-size: 15px;
-    height: 45px;
-    width: 200px;
-    border-width: 0px;
-    border-radius: 5px;
 }
