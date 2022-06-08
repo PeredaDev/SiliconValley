@@ -345,7 +345,7 @@ footer table{
 }
 
 #why-us{
-    margin: 10px 10px;
+    margin: 10px 250px;
     display: grid;
     grid-template: auto / 1fr 1fr 1fr 1fr;
     text-align: center;
@@ -358,9 +358,6 @@ footer table{
 }
 
 @media (max-width: 1090px) {
-    #why-us{
-        margin: 10px 250px;
-    }
 
     #star-items{
         grid-template: auto / 1fr 1fr;
