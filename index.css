@@ -167,12 +167,7 @@ footer table{
 
 /*Products Body*/
 
-#hero-products {
-    text-align: center;
-    color: white;
-    background-color: rgba(12, 35, 94, 0.8);
-    margin: 15px 0;
-}
+
 
 #hero-products button{
     background-color: rgba(12, 35, 94, 0.8);
