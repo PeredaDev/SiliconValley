@@ -90,6 +90,16 @@ header nav ul{
     color: aliceblue;
 }
 
+.nav-link{
+    text-decoration-line: none;
+    padding: 10px;
+    transition: background-color 0.7s;
+}
+
+.nav-link:hover{
+    background-color: rgba(12, 35, 94, 0.529);
+}
+
 /* Footer */
 
 footer{
@@ -125,6 +135,16 @@ footer table{
 
 #hero-index img{
     width: 50%; 
+    animation-name: biggerImage;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+@keyframes biggerImage {
+    0%{transform: scale(0.8);}
+    10%{translate: 10px 10px;}
 }
 
 .hero-index__container{
@@ -148,8 +168,17 @@ footer table{
     width: 150px;
     border-width: 0px;
     border-radius: 5px;
-    margin: 0 auto;
-    display: block
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.hero-index__container button:hover{
+    background-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+    color: blue;
 }
 
 #star-items{
@@ -167,6 +196,15 @@ footer table{
 
 #star-items button{
     grid-column: 1 / 6;
+    background-color: rgba(12, 35, 94, 0.8);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 170px;
+    border-width: 0px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block
 }
 
 /* Blog Body*/
@@ -276,6 +314,11 @@ footer table{
     padding: 15px;
     overflow: hidden;
     height: 380px;
+    transition: transform 1s;
+}
+
+.catalog__card:hover{
+    transform: scale(1.04);
 }
 
 .catalog__card img{
@@ -469,6 +512,26 @@ footer table{
 /* Media queries */
 
 @media (max-width: 1090px) {
+    header{
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+    } 
+
+    header div img{
+        max-width: 45px;
+        margin: 0;
+    }
+    
+    header div h1{
+        margin-left: 1rem;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    header nav ul{
+        margin-right: 0rem;
+    } 
 
     #star-items{
         grid-template: auto / 1fr 1fr;
@@ -538,31 +601,9 @@ footer table{
         font-size: 2.6em;
     }
 
-    header{
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1rem;
-    } 
-
-    header div img{
-        max-width: 45px;
-        margin: 0;
-    }
-    
-    header div h1{
-        margin-left: 1rem;
-        font-size: 3rem;
-        font-weight: bold;
-    }
-
-    header nav ul{
-        margin-right: 0rem;
-    } 
-
     #catalog {
         grid-template: auto / 1fr 1fr;
     }
-
 
 }
 
@@ -625,7 +666,7 @@ footer table{
     }    
 }
 
-@media (max-width: 522px) {
+@media (max-width: 585px) {
     #why-us{
         margin: 10px auto;
     }
