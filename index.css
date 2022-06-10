@@ -465,6 +465,7 @@ footer table{
     width: 120px;
 }
 
+
 @media (max-width: 1090px) {
 
     #star-items{
@@ -610,7 +611,7 @@ footer table{
     }
 
     .catalog__card{
-        width: 320px;
+        width: 310px;
     }
 
     #hero-index img{
