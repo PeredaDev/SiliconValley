@@ -419,7 +419,7 @@ footer table{
 }
 
 #contact-forms::after{
-    background: url(images/confident-call-center.jpg);
+    background: url(../images/confident-call-center.jpg);
     content: ' ';
     display: block;
     position: absolute;
