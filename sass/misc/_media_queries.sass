@@ -1,0 +1,157 @@
+/* Media queries */
+
+@media (max-width: 1090px) 
+    header
+        flex-direction: column
+        justify-content: space-between
+        gap: 1rem
+        div
+            img
+                max-width: 45px
+                margin: 0
+            h1
+                margin-left: 1rem
+                font-size: 3rem
+                font-weight: bold
+        nav ul
+            margin-right: 0rem
+    
+    #star-items
+        grid-template: auto / 1fr 1fr
+        h1
+            grid-column: 1/3
+        button
+            grid-column: 1 / 3
+
+    #hero-index img
+        height: 300px
+    
+
+    .hero-index__container h1
+        font-size: 3.4em
+    
+
+    #blogs-title 
+        grid-template: 1fr / 1fr
+        margin-left: 35px
+        margin-right: 35px
+        h1
+            grid-column: span 1
+            font-size: 2.3em
+        div 
+            h2
+                color:  #0c235ecc
+                font-size: 2em
+            time
+                font-size: 1.5em
+                font-style: italic
+            p
+                font-size: 1.5em
+
+    #catalog 
+        grid-template: auto / 1fr 1fr 1fr
+
+@media (max-width: 880px) 
+    #why-us
+        margin: 10px 180px
+    
+    .banner 
+        background-color: rgba(12, 35, 94, 0.8)
+        font-size: 2rem
+        text-align: center
+        padding: 5px
+        color: aliceblue
+    
+    .hero-index__container h1
+        font-size: 2.6em
+    
+    #catalog 
+        grid-template: auto / 1fr 1fr
+
+@media (max-width: 780px) 
+    #contact
+        justify-content: center
+    
+
+    #contact-forms div
+        justify-content: center
+    
+
+    #why-us
+        margin: 10px 100px
+    
+    #who-we-are div 
+        font-size: 1.5em
+    
+
+    #hero-image 
+        height: 300px;
+        h1 
+            font-size: 6em
+        p 
+            font-size: 2.5em;
+
+
+    #star-items
+        grid-template: auto / 1fr
+        h1
+            grid-column: 1 / 2
+        button
+            grid-column: 1 / 2
+
+    #catalog
+        grid-template: auto / 1fr
+        margin: 15px 1em
+    
+    .catalog__card
+        width: 310px
+    
+
+    #hero-index img
+        min-width: 400px
+        .hero-index__container
+            width: 90%
+
+@media (max-width: 585px) 
+    #why-us
+        margin: 10px auto
+    
+    #who-we-are div 
+        font-size: 1em
+
+    #star-items
+        margin: 15px auto
+    
+    header
+        padding: 1rem 0
+        flex-direction: row
+        nav
+            display:none
+        div
+            margin-left: 1rem
+            flex-basis: auto
+    
+    .header-menu
+        display:inline
+        max-height: 40px
+        width: auto
+        margin-right: 1rem
+
+    footer
+        font-size: 1.5rem
+
+    .banner 
+        font-size: 1.5rem
+
+    #blogs-title div p
+        font-size: 1.3em
+
+@media (max-width: 433px) 
+    #hero-index img
+        min-width: 100%
+    
+    #hero-image h1 
+        font-size: 4em
+    
+    #hero-image p 
+        font-size: 1.5em
