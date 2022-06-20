@@ -5,7 +5,7 @@
         flex-direction: column
         justify-content: space-between
         gap: 1rem
-        div
+        div 
             img
                 max-width: 45px
                 margin: 0
@@ -22,15 +22,14 @@
             grid-column: 1/3
         button
             grid-column: 1 / 3
-
-    #hero-index img
-        height: 300px
     
+    #hero-index 
+        img
+            height: 300px
 
     .hero-index__container h1
         font-size: 3.4em
     
-
     #blogs-title 
         grid-template: 1fr / 1fr
         margin-left: 35px
@@ -38,7 +37,7 @@
         h1
             grid-column: span 1
             font-size: 2.3em
-        div 
+        div
             h2
                 color:  #0c235ecc
                 font-size: 2em
@@ -50,8 +49,10 @@
 
     #catalog 
         grid-template: auto / 1fr 1fr 1fr
+    
 
 @media (max-width: 880px) 
+
     #why-us
         margin: 10px 180px
     
@@ -61,37 +62,34 @@
         text-align: center
         padding: 5px
         color: aliceblue
-    
+
     .hero-index__container h1
         font-size: 2.6em
     
     #catalog 
         grid-template: auto / 1fr 1fr
+    
 
 @media (max-width: 780px) 
     #contact
         justify-content: center
-    
 
     #contact-forms div
         justify-content: center
     
-
     #why-us
         margin: 10px 100px
-    
+
     #who-we-are div 
         font-size: 1.5em
     
-
     #hero-image 
-        height: 300px;
+        height: 300px
         h1 
             font-size: 6em
-        p 
-            font-size: 2.5em;
-
-
+        p
+            font-size: 2.5em
+       
     #star-items
         grid-template: auto / 1fr
         h1
@@ -99,25 +97,33 @@
         button
             grid-column: 1 / 2
 
-    #catalog
+    #catalog 
         grid-template: auto / 1fr
         margin: 15px 1em
     
     .catalog__card
         width: 310px
-    
 
-    #hero-index img
-        min-width: 400px
+    #hero-index 
+        img
+            min-width: 400px
+    
         .hero-index__container
             width: 90%
+
 
 @media (max-width: 585px) 
     #why-us
         margin: 10px auto
     
-    #who-we-are div 
-        font-size: 1em
+    #who-we-are 
+        flex-wrap: wrap
+        div 
+            font-size: 1em
+            width: 100%
+        img
+            width: 90%  
+            margin: 10px auto
 
     #star-items
         margin: 15px auto
@@ -126,13 +132,13 @@
         padding: 1rem 0
         flex-direction: row
         nav
-            display:none
+            display: none
         div
             margin-left: 1rem
             flex-basis: auto
-    
+
     .header-menu
-        display:inline
+        display: inline
         max-height: 40px
         width: auto
         margin-right: 1rem
@@ -142,16 +148,22 @@
 
     .banner 
         font-size: 1.5rem
-
+    
     #blogs-title div p
         font-size: 1.3em
 
+
 @media (max-width: 433px) 
+    #who-we-are 
+        img
+            margin: 10px auto
+
     #hero-index img
         min-width: 100%
-    
+
     #hero-image h1 
         font-size: 4em
     
     #hero-image p 
         font-size: 1.5em
+    

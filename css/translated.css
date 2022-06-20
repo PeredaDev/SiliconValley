@@ -472,23 +472,32 @@ header {
     width: 310px; }
   #hero-index img {
     min-width: 400px; }
-    #hero-index img .hero-index__container {
-      width: 90%; } }
+  #hero-index .hero-index__container {
+    width: 90%; } }
 
 @media (max-width: 585px) {
   #why-us {
     margin: 10px auto; }
-  #who-we-are div {
-    font-size: 1em; }
+  #who-we-are {
+    flex-wrap: wrap; }
+    #who-we-are div {
+      font-size: 1em;
+      width: 100%; }
+    #who-we-are img {
+      width: 90%;
+      margin: 10px auto; }
   #star-items {
     margin: 15px auto; }
   header {
     padding: 1rem 0;
     flex-direction: row; }
+    header nav {
+      display: none; }
     header div {
       margin-left: 1rem;
       flex-basis: auto; }
   .header-menu {
+    display: inline;
     max-height: 40px;
     width: auto;
     margin-right: 1rem; }
@@ -500,6 +509,8 @@ header {
     font-size: 1.3em; } }
 
 @media (max-width: 433px) {
+  #who-we-are img {
+    margin: 10px auto; }
   #hero-index img {
     min-width: 100%; }
   #hero-image h1 {
