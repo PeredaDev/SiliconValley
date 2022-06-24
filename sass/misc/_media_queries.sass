@@ -15,6 +15,7 @@
                 font-weight: bold
         nav ul
             margin-right: 0rem
+       
     
     #star-items
         grid-template: auto / 1fr 1fr
@@ -111,6 +112,14 @@
         .hero-index__container
             width: 90%
 
+@media (min-width: 585px)
+    #hamburger
+        &:checked ~ nav
+            display: block
+            flex-basis: 55%
+            ul
+                flex-direction: row
+                justify-content: flex-end
 
 @media (max-width: 585px) 
     #why-us
@@ -131,17 +140,21 @@
     header
         padding: 1rem 0
         flex-direction: row
+        margin: 0
         nav
             display: none
         div
             margin-left: 1rem
             flex-basis: auto
+        .hamburger 
+            display: block
+            z-index: -1
 
-    .header-menu
-        display: inline
-        max-height: 40px
-        width: auto
-        margin-right: 1rem
+    #hamburger
+        display: block
+        top: 47px
+        right: 11px
+        opacity: 0
 
     footer
         font-size: 1.5rem
@@ -154,6 +167,9 @@
 
 
 @media (max-width: 433px) 
+    #hamburger
+        top: 67px
+
     #who-we-are 
         img
             margin: 10px auto

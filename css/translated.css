@@ -71,9 +71,20 @@ header {
       margin-right: 1rem;
       text-decoration: none;
       font-size: 2.5rem; }
+  header .hamburger {
+    display: none; }
 
-.header-menu {
-  display: none; }
+#hamburger {
+  display: none;
+  position: absolute;
+  height: 34px;
+  width: 50px; }
+  #hamburger:checked ~ nav {
+    display: block;
+    flex-basis: 100%; }
+    #hamburger:checked ~ nav ul {
+      flex-direction: column;
+      align-items: center; }
 
 .banner {
   background-color: rgba(12, 35, 94, 0.8);
@@ -477,6 +488,14 @@ header {
   #hero-index .hero-index__container {
     width: 90%; } }
 
+@media (min-width: 585px) {
+  #hamburger:checked ~ nav {
+    display: block;
+    flex-basis: 55%; }
+    #hamburger:checked ~ nav ul {
+      flex-direction: row;
+      justify-content: flex-end; } }
+
 @media (max-width: 585px) {
   #why-us {
     margin: 10px auto; }
@@ -492,17 +511,21 @@ header {
     margin: 15px auto; }
   header {
     padding: 1rem 0;
-    flex-direction: row; }
+    flex-direction: row;
+    margin: 0; }
     header nav {
       display: none; }
     header div {
       margin-left: 1rem;
       flex-basis: auto; }
-  .header-menu {
-    display: inline;
-    max-height: 40px;
-    width: auto;
-    margin-right: 1rem; }
+    header .hamburger {
+      display: block;
+      z-index: -1; }
+  #hamburger {
+    display: block;
+    top: 47px;
+    right: 11px;
+    opacity: 0; }
   footer {
     font-size: 1.5rem; }
   .banner {
@@ -511,6 +534,8 @@ header {
     font-size: 1.3em; } }
 
 @media (max-width: 433px) {
+  #hamburger {
+    top: 67px; }
   #who-we-are img {
     margin: 10px auto; }
   #hero-index img {
