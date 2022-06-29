@@ -1,5 +1,6 @@
 @import '../misc/variables'
-    
+@import '../misc/mixins'
+
 /* Us page */
 
 #hero-image 
@@ -8,10 +9,7 @@
     height: 500px
     align-items: center
     justify-content: center
-    background-image: url("https://img.freepik.com/foto-gratis/operador-call-center-seguro-hablando-cliente_74855-4059.jpg?t=st=1653160216~exp=1653160816~hmac=3eccfb34eae662dff9b3b47c74a1d3b2463f72045bdfafb9ca6ba4ddff3ac1e2&w=1380")
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
+    @include backgroundImage("https://img.freepik.com/foto-gratis/operador-call-center-seguro-hablando-cliente_74855-4059.jpg?t=st=1653160216~exp=1653160816~hmac=3eccfb34eae662dff9b3b47c74a1d3b2463f72045bdfafb9ca6ba4ddff3ac1e2&w=1380")
     color: $blueColor
     opacity: 0.6
     h1
@@ -20,20 +18,22 @@
         color: black
         font-size: 4em
 
+
+
 #who-we-are 
     background-color: rgba(12, 35, 94, 0.667)
     align-items: center
     justify-items: center
     height: auto
     display: flex
+    .halfWidth
+        box-sizing: border-box
+        width: 49%
+        margin: 10px 10px
     img 
-        box-sizing: border-box
-        width: 49%
-        margin: 10px 10px
+        @extend .halfWidth
     div 
-        box-sizing: border-box
-        width: 49%
-        margin: 10px 10px
+        @extend .halfWidth
         font-size: 2em
 
 #why-us
@@ -45,3 +45,17 @@
     grid-gap: 1em
     h1
         grid-column: 1/5
+
+    @for $i from 1 through 4 
+        picture:nth-of-type(#{$i})
+            height: 100px
+            width: 100px
+            @if $i == 1
+                @include backgroundImage(map-get($social_images, "warranty"))
+            @else if $i == 2
+                @include backgroundImage(map-get($social_images, "store"))
+            @else if $i == 3
+                @include backgroundImage(map-get($social_images, "time"))
+            @else
+                @include backgroundImage(map-get($social_images, "experience"))
+           

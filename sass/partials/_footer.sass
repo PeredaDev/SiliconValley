@@ -1,4 +1,5 @@
 /* Footer */
+@import '../misc/variables'
 
 footer
     color: white
@@ -14,6 +15,11 @@ footer
         margin-top: 5px
         margin-bottom: 5px
 
+
+@for $i from 1 through 4
+    .footer-table tbody tr td img:nth-of-type(#{$i})
+        height: 50px
+        width: 50px
 
 
 
